@@ -1,1 +1,23 @@
 name: reusable workflow
+
+on:
+  workflow_call:
+    inputs:
+      app_name:
+        description:
+        required: true
+        type: string
+
+jobs:
+  reusable:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: Display application name
+        run: echo "application name is ${{inputs.app_name}}"
+
+      - name: Display repo name
+        run: echo "repository name is ${{github.repository}}"
+
+      - name: Display workflow information
+        run: echo "Reusable workflow executed successfully!"
