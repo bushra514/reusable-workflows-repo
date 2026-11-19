@@ -23,7 +23,7 @@ jobs:
         run: echo "Reusable workflow executed successfully!"
 
       - name: Display workflow name
-        run: echo "Workflow name is: ${{github.workflow}}"
+        run: echo "Workflow name is ${{github.workflow}}"
 
       - name: Display branch or tag ref
         run: echo "${{github.ref}}"
